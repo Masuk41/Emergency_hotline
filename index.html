@@ -5,87 +5,328 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Service Directory</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <div class="logo">
-        <div class="logo-img">ESD</div>
-        <span>Emergency Service</span>
+      <div class="nav-left">
+        <!-- Logo Image -->
+        <img src="/assets/logo.png" alt="Emergency Logo" class="nav-logo" />
+        <span class="nav-title">Emergency Service</span>
       </div>
-      <div class="nav-items">
+      <div class="nav-right">
         <div class="nav-item">
-          <i class="fas fa-heart"></i>
-          <span id="heart-count">0</span>
+          <span class="heart-icon">❤️</span>
+          <span id="heartCount">0</span>
         </div>
         <div class="nav-item">
-          <i class="fas fa-coins"></i>
-          <span id="coin-count">100</span>
+          <span class="coin-icon">🪙</span>
+          <span id="coinCount">100</span>
         </div>
         <div class="nav-item">
-          <i class="fas fa-copy"></i>
-          <span id="copy-count">0</span>
+          <span id="copyCount">0 Copy</span>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-logo">
-        <i class="fas fa-phone-alt"></i>
-      </div>
+      <!-- Hero Logo -->
+      <img
+        src="/assets/logo-dark.png"
+        alt="Bangladesh Logo"
+        class="hero-logo"
+      />
       <h1 class="hero-title">Emergency Service Directory</h1>
-      <p class="hero-subtitle">
-        Government Emergency Services at Your Fingertip – A Project by
+      <p class="hero-slogan">
+        Government Emergency Services at Your Fingertip - A Project by
         Government of the People's Republic of Bangladesh
       </p>
     </section>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="main-content">
-        <!-- Card Section -->
-        <div class="card-section">
-          <h2 class="section-title">
-            <i class="fas fa-phone"></i>
-            Emergency Hotline
-          </h2>
-          <div class="cards-grid" id="cards-container"></div>
+    <!-- Main Section -->
+    <section class="main-section">
+      <div class="container">
+        <!-- Cards Section -->
+        <div class="cards-section">
+          <div class="emergency-cards">
+            <!-- National Emergency Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Emergency Icon -->
+              <img
+                src="/assets/emergency.png"
+                alt="Emergency Icon"
+                class="card-icon"
+              />
+              <h3 class="card-title">National Emergency Number</h3>
+              <p class="card-subtitle">National Emergency</p>
+              <div class="card-number">999</div>
+              <div class="card-category">All</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="999">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="999"
+                  data-service="National Emergency Number"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Police Helpline Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Police Icon -->
+              <img
+                src="/assets/police.png"
+                alt="Police Icon"
+                class="card-icon"
+              />
+              <h3 class="card-title">Police Helpline Number</h3>
+              <p class="card-subtitle">Police</p>
+              <div class="card-number">999</div>
+              <div class="card-category">Police</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="999">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="999"
+                  data-service="Police Helpline Number"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Fire Service Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Fire Icon -->
+              <img
+                src="/assets/fire-service.png"
+                alt="Fire Icon"
+                class="card-icon"
+              />
+              <h3 class="card-title">Fire Service Number</h3>
+              <p class="card-subtitle">Fire Service</p>
+              <div class="card-number">999</div>
+              <div class="card-category">Fire</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="999">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="999"
+                  data-service="Fire Service Number"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Ambulance Service Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Ambulance Icon -->
+              <img
+                src="/assets/ambulance.png"
+                alt="Ambulance Icon"
+                class="card-icon"
+              />
+              <h3 class="card-title">Ambulance Service</h3>
+              <p class="card-subtitle">Ambulance</p>
+              <div class="card-number">1994-999999</div>
+              <div class="card-category">Health</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="1994-999999">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="1994-999999"
+                  data-service="Ambulance Service"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Women & Child Helpline Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Women Child Icon -->
+              <img
+                src="/assets/emergency.png"
+                alt="Women Child Icon"
+                class="card-icon"
+              />
+              <h3 class="card-title">Women & Child Helpline</h3>
+              <p class="card-subtitle">Women & Child Helpline</p>
+              <div class="card-number">109</div>
+              <div class="card-category">Help</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="109">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="109"
+                  data-service="Women & Child Helpline"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Anti-Corruption Helpline Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Anti Corruption Icon -->
+              <img
+                src="/assets/emergency.png"
+                alt="Anti Corruption Icon"
+                class="card-icon"
+              />
+              <h3 class="card-title">Anti-Corruption Helpline</h3>
+              <p class="card-subtitle">Anti-Corruption</p>
+              <div class="card-number">106</div>
+              <div class="card-category">Govt.</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="106">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="106"
+                  data-service="Anti-Corruption Helpline"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+
+            <!-- Electricity Helpline-->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Electricity Helpline Icon -->
+              <img
+                src="/assets/emergency.png"
+                alt="Electricity Helpline"
+                class="card-icon"
+              />
+              <h3 class="card-title">Electricity Helpline</h3>
+              <p class="card-subtitle">Electricity Helpline</p>
+              <div class="card-number">116216</div>
+              <div class="card-category">Electricity</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="109">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="109"
+                  data-service="Women & Child Helpline"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+            <!-- Brac Helpline Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!-- Brac Helpline Card Icon -->
+              <img
+                src="/assets/emergency.png"
+                alt="Brac Helpline Icon"
+                class="card-icon"
+              />
+              <h3 class="card-title">Brac Helpline</h3>
+              <p class="card-subtitle">Brac Helpline</p>
+              <div class="card-number">16445</div>
+              <div class="card-category">NGO</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="106">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="106"
+                  data-service="Anti-Corruption Helpline"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+            <!-- Bangladesh Railway Helpline Card -->
+            <div class="card">
+              <div class="card-header">
+                <span class="heart-btn">♡</span>
+              </div>
+              <!--  Bangladesh Railway  Icon -->
+              <img
+                src="/assets/emergency.png"
+                alt="Bangladesh Railway "
+                class="card-icon"
+              />
+              <h3 class="card-title">Bangladesh Railway Helpline</h3>
+              <p class="card-subtitle">Bangladesh Railway</p>
+              <div class="card-number">163</div>
+              <div class="card-category">TRAVEL</div>
+              <div class="card-buttons">
+                <button class="copy-btn" data-number="106">
+                  <span class="copy-icon">📋</span> Copy
+                </button>
+                <button
+                  class="call-btn"
+                  data-number="106"
+                  data-service="Anti-Corruption Helpline"
+                >
+                  <span class="call-icon">📞</span> Call
+                </button>
+              </div>
+            </div>
+            <!-- end -->
+          </div>
         </div>
 
         <!-- History Section -->
         <div class="history-section">
           <div class="history-header">
-            <h2 class="section-title">
-              <i class="fas fa-history"></i>
-              Call History
-            </h2>
-            <button class="btn btn-clear" id="clear-history">
-              <i class="fas fa-trash"></i>
-              Clear History
-            </button>
+            <div class="history-title">
+              <span class="history-icon">🕒</span>
+              <span>Call History</span>
+            </div>
+            <button id="clearHistoryBtn" class="clear-btn">Clear</button>
           </div>
-          <ul class="history-list" id="history-list">
-            <li class="empty-history">No call history yet</li>
-          </ul>
+          <div id="callHistory" class="call-history">
+            <!-- Call history items will be dynamically added here -->
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Alert -->
-    <div class="alert" id="alert">
-      <i class="fas fa-check-circle"></i>
-      <span id="alert-message"></span>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>© 2023 Emergency Service Directory. All rights reserved.</p>
-    </footer>
+    </section>
 
     <script src="script.js"></script>
   </body>
