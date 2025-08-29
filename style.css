@@ -102,3 +102,301 @@ body {
   margin: 0 auto;
 }
 /* Main Section */
+.main-section {
+  padding: 40px 0;
+  background-color: #f8fafc;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cards Section */
+.emergency-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.heart-btn {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.heart-btn:hover {
+  transform: scale(1.2);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  display: block;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #2d5a27;
+}
+
+.card-subtitle {
+  color: #666;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.card-number {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 15px;
+  color: #2d5a27;
+}
+
+.card-category {
+  background-color: #e5f3ff;
+  color: #0066cc;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 50%;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.copy-btn,
+.call-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.copy-btn {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.copy-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.call-btn {
+  background-color: #22c55e;
+  color: white;
+}
+
+.call-btn:hover {
+  background-color: #16a34a;
+}
+
+/* History Section */
+.history-section {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.history-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: #2d5a27;
+}
+
+.history-icon {
+  font-size: 18px;
+}
+
+.clear-btn {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #16a34a;
+}
+
+.call-history {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 15px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-service-name {
+  font-weight: bold;
+  color: #2d5a27;
+}
+
+.history-service-number {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.history-time {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Empty State */
+.empty-history {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 40px 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-slogan {
+    font-size: 1rem;
+  }
+
+  .emergency-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-number {
+    font-size: 1.5rem;
+  }
+
+  .card-buttons {
+    flex-direction: column;
+  }
+
+  .history-section {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-title {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .emergency-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .history-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
